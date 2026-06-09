@@ -1,0 +1,42 @@
+import type { Metadata } from "next";
+import { Montserrat, Open_Sans } from "next/font/google";
+import "./globals.css";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "Mountain Car — Car Rental Iceland",
+  description:
+    "Straightforward 4x4 rentals and campers in Iceland. No hidden fees, free minor damages. Based near KEF Airport.",
+  keywords: "car rental Iceland, 4x4 Iceland, camper Iceland, KEF airport",
+  openGraph: {
+    title: "Mountain Car — Car Rental Iceland",
+    description: "Not just a rental. Your guide to Iceland's wonders.",
+    url: "https://www.mountaincar.is",
+    siteName: "Mountain Car",
+    locale: "en_US",
+    type: "website",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className={`${montserrat.variable} ${openSans.variable}`}>
+      <body className="font-[var(--font-open-sans)]">{children}</body>
+    </html>
+  );
+}
