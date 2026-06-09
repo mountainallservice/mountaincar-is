@@ -36,6 +36,19 @@ const cars = [
       { label: "A/C", value: "Manual" },
     ],
   },
+  {
+    name: "VW Caddy Beach",
+    desc: "Compact camper for 4–5 people. Rooftop tent, camping kit, free WiFi — perfect for couples or small groups.",
+    img: "/fleet/caddy-beach.jpg",
+    specs: [
+      { label: "Seats", value: "5" },
+      { label: "Engine", value: "2.0 TDI" },
+      { label: "Gearbox", value: "Manual" },
+      { label: "Drive", value: "FWD" },
+      { label: "Tent", value: "Rooftop" },
+      { label: "WiFi", value: "Free" },
+    ],
+  },
 ];
 
 export default function Fleet() {
@@ -49,7 +62,7 @@ export default function Fleet() {
           <h2 className="font-heading text-3xl md:text-4xl font-bold">Find the Perfect Car</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cars.map((car) => (
             <div
               key={car.name}
