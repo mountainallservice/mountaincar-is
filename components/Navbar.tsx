@@ -30,14 +30,19 @@ export default function Navbar() {
     >
       {/* Top bar */}
       {!scrolled && (
-        <div className="hidden md:flex justify-center gap-8 text-white/80 text-xs bg-brand-primary/60 py-2 absolute top-0 left-0 right-0">
-          <a href="mailto:rental@mountaincar.is" className="hover:text-white transition-colors">
-            rental@mountaincar.is
+        <div className="hidden md:flex items-center justify-between text-white/80 text-xs bg-brand-primary/60 py-2 px-6 absolute top-0 left-0 right-0">
+          <a href="https://mountaincar.is" className="hover:text-white transition-colors flex items-center gap-1">
+            ← mountaincar.is
           </a>
-          <a href="tel:+3548888005" className="hover:text-white transition-colors">
-            +354 888 8005
-          </a>
-          <span>Mon - Sat: 10:00 - 18:00</span>
+          <div className="flex gap-8">
+            <a href="mailto:rental@mountaincar.is" className="hover:text-white transition-colors">
+              rental@mountaincar.is
+            </a>
+            <a href="tel:+3548888005" className="hover:text-white transition-colors">
+              +354 888 8005
+            </a>
+            <span>Mon - Sat: 10:00 - 18:00</span>
+          </div>
         </div>
       )}
 
@@ -103,6 +108,12 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
           >
             Request Quote
+          </a>
+          <a
+            href="https://mountaincar.is"
+            className="text-white/60 text-xs text-center hover:text-white transition-colors"
+          >
+            ← Back to mountaincar.is
           </a>
         </div>
       )}
