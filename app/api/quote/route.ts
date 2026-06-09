@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
 
     // Send email via Resend
     await resend.emails.send({
-      from: "Mountain Car Website <onboarding@resend.dev>",
+      from: process.env.RESEND_FROM_EMAIL || "Mountain Car Website <onboarding@resend.dev>",
       to: [process.env.RESEND_TO_EMAIL || "rental@mountaincar.is"],
       replyTo: email,
       subject: `New Quote Request — ${vehicle} — ${name}`,
