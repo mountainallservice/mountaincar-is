@@ -1,9 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-primary: #1E293B;
+  --color-brand-accent: #F58220;
+  --color-brand-light: #F8FAFC;
+  --font-heading: var(--font-montserrat), Montserrat, sans-serif;
+  --font-sans: var(--font-open-sans), "Open Sans", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   color: #1E293B;
+  font-family: var(--font-sans);
 }
