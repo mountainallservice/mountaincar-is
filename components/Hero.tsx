@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <header
-      className="relative h-screen min-h-[700px] flex items-center justify-center"
+      className="relative min-h-screen md:h-screen flex items-center justify-center"
       style={{
         backgroundImage:
           'linear-gradient(rgba(30,41,59,0.6), rgba(30,41,59,0.5)), url("https://d1yei2z3i6k35z.cloudfront.net/16287944/698b710f2a12a_IMG-20250608-WA0036.jpg")',
@@ -9,7 +9,7 @@ export default function Hero() {
         backgroundPosition: "center",
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 w-full grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center pt-24 pb-12 md:py-0">
         {/* Left: Hero copy */}
         <div className="text-white">
           <p className="uppercase tracking-[0.2em] text-brand-accent text-sm font-semibold mb-4">
@@ -48,7 +48,7 @@ export default function Hero() {
         </div>
 
         {/* Right: Quick booking card */}
-        <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-white">
+        <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 md:p-8 text-white">
           <h2 className="font-heading text-xl font-bold mb-1">Start Your Adventure</h2>
           <p className="text-brand-accent font-semibold text-sm mb-4">Simple & Direct Booking</p>
           <p className="text-white/80 text-sm mb-6">
