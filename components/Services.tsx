@@ -1,1 +1,77 @@
-Y29uc3Qgc2VydmljZXMgPSBbCiAgewogICAgaWNvbjogIvCfmpkiLAogICAgdGl0bGU6ICI0eDQgQ2FyIFJlbnRhbCIsCiAgICBkZXNjcmlwdGlvbjoKICAgICAgIkNvbnF1ZXIgSWNlbGFuZCdzIEYtcm9hZHMgYW5kIGhpZ2hsYW5kcyBpbiBvdXIgcnVnZ2VkIERhY2lhIER1c3RlciA0eDRzLiBQZXJmZWN0IGZvciB0aGUgUmluZyBSb2FkLCBHb2xkZW4gQ2lyY2xlLCBhbmQgYmV5b25kLiIsCiAgICBoaWdobGlnaHQ6ICJGcm9tIERheSAxIiwKICB9LAogIHsKICAgIGljb246ICLwn4+V77iPIiwKICAgIHRpdGxlOiAiQ2FtcGVyIFJlbnRhbCIsCiAgICBkZXNjcmlwdGlvbjoKICAgICAgIkhpdCB0aGUgcm9hZCBhbmQgc2xlZXAgdW5kZXIgdGhlIG1pZG5pZ2h0IHN1biBpbiBvdXIgUmVuYXVsdCBNYXN0ZXIgQ2FtcGVyIOKAlCBmdWxseSBlcXVpcHBlZCBmb3Igc2VsZi1zdWZmaWNpZW50IGFkdmVudHVyZXMuIiwKICAgIGhpZ2hsaWdodDogIlNsZWVwLUluIFJlYWR5IiwKICB9LAogIHsKICAgIGljb246ICLinIjvuI8iLAogICAgdGl0bGU6ICJBaXJwb3J0IFBpY2t1cCIsCiAgICBkZXNjcmlwdGlvbjoKICAgICAgIkFycml2ZSBhdCBLRUYgYW5kIGRyaXZlIHN0cmFpZ2h0IGludG8geW91ciBhZHZlbnR1cmUuIFdlJ3JlIGp1c3QgNSBtaW51dGVzIGZyb20gdGhlIGFpcnBvcnQg4oCUIG5vIHNodXR0bGVzLCBubyB3YWl0aW5nLiIsCiAgICBoaWdobGlnaHQ6ICI1IG1pbiBmcm9tIEtFRiIsCiAgfSwKICB7CiAgICBpY29uOiAi8J+ThSIsCiAgICB0aXRsZTogIkxvbmctVGVybSBSZW50YWxzIiwKICAgIGRlc2NyaXB0aW9uOgogICAgICAiU3RheWluZyBmb3IgYSBtb250aCBvciBtb3JlPyBBc2sgYWJvdXQgb3VyIGxvbmctdGVybSByYXRlcy4gU3BlY2lhbCBwcmljZXMgZm9yIGV4dGVuZGVkIGFkdmVudHVyZXMgb3Igd29yayBjb250cmFjdHMuIiwKICAgIGhpZ2hsaWdodDogIkJlc3QgUmF0ZXMiLAogIH0sCl07CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBTZXJ2aWNlcygpIHsKICByZXR1cm4gKAogICAgPHNlY3Rpb24gaWQ9InNlcnZpY2VzIiBjbGFzc05hbWU9InB5LTE2IG1kOnB5LTI0IGJnLWJyYW5kLXByaW1hcnkiPgogICAgICA8ZGl2IGNsYXNzTmFtZT0ibWF4LXctN3hsIG14LWF1dG8gcHgtNCI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtY2VudGVyIG1iLTE0Ij4KICAgICAgICAgIDxwIGNsYXNzTmFtZT0idXBwZXJjYXNlIHRyYWNraW5nLVswLjJlbV0gdGV4dC1icmFuZC1hY2NlbnQgdGV4dC1zbSBmb250LXNlbWlib2xkIG1iLTMiPgogICAgICAgICAgICBXaGF0IFdlIE9mZmVyCiAgICAgICAgICA8L3A+CiAgICAgICAgICA8aDIgY2xhc3NOYW1lPSJmb250LWhlYWRpbmcgdGV4dC0zeGwgbWQ6dGV4dC00eGwgZm9udC1ib2xkIHRleHQtd2hpdGUiPgogICAgICAgICAgICBPdXIgU2VydmljZXMKICAgICAgICAgIDwvaDI+CiAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtd2hpdGUvNjAgbXQtNCBtYXgtdy14bCBteC1hdXRvIj4KICAgICAgICAgICAgRnJvbSBhIG9uZS1kYXkgYWR2ZW50dXJlIHRvIGEgbW9udGgtbG9uZyByb2FkIHRyaXAg4oCUIHdlIGhhdmUgdGhlIHJpZ2h0IHZlaGljbGUgYW5kIHNlcnZpY2UgZm9yIHlvdS4KICAgICAgICAgIDwvcD4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImdyaWQgZ3JpZC1jb2xzLTEgc206Z3JpZC1jb2xzLTIgbGc6Z3JpZC1jb2xzLTQgZ2FwLTYiPgogICAgICAgICAge3NlcnZpY2VzLm1hcCgocykgPT4gKAogICAgICAgICAgICA8ZGl2CiAgICAgICAgICAgICAga2V5PXtzLnRpdGxlfQogICAgICAgICAgICAgIGNsYXNzTmFtZT0iYmctd2hpdGUvNSBib3JkZXIgYm9yZGVyLXdoaXRlLzEwIHJvdW5kZWQtMnhsIHAtNiBob3Zlcjpib3JkZXItYnJhbmQtYWNjZW50IGhvdmVyOmJnLXdoaXRlLzEwIHRyYW5zaXRpb24tYWxsIGdyb3VwIgogICAgICAgICAgICA+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtNHhsIG1iLTQiPntzLmljb259PC9kaXY+CiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJpbmxpbmUtYmxvY2sgdGV4dC14cyBmb250LXNlbWlib2xkIHRleHQtYnJhbmQtYWNjZW50IHVwcGVyY2FzZSB0cmFja2luZy13aWRlciBtYi0zIj4KICAgICAgICAgICAgICAgIHtzLmhpZ2hsaWdodH0KICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT0iZm9udC1oZWFkaW5nIHRleHQtd2hpdGUgZm9udC1ib2xkIHRleHQtbGcgbWItMyI+CiAgICAgICAgICAgICAgICB7cy50aXRsZX0KICAgICAgICAgICAgICA8L2gzPgogICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC13aGl0ZS82MCB0ZXh0LXNtIGxlYWRpbmctcmVsYXhlZCI+e3MuZGVzY3JpcHRpb259PC9wPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICkpfQogICAgICAgIDwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1jZW50ZXIgbXQtMTAiPgogICAgICAgICAgPGEKICAgICAgICAgICAgaHJlZj0iI2ZsZWV0IgogICAgICAgICAgICBjbGFzc05hbWU9ImlubGluZS1ibG9jayBiZy1icmFuZC1hY2NlbnQgdGV4dC13aGl0ZSBweC04IHB5LTMuNSByb3VuZGVkLWxnIGZvbnQtc2VtaWJvbGQgaG92ZXI6Ymctb3JhbmdlLTYwMCB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgICAgID4KICAgICAgICAgICAgQnJvd3NlIE91ciBGbGVldAogICAgICAgICAgPC9hPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvc2VjdGlvbj4KICApOwp9Cg==
+const services = [
+  {
+    icon: "🚙",
+    title: "4x4 Car Rental",
+    description:
+      "Conquer Iceland's F-roads and highlands in our rugged Dacia Duster 4x4s. Perfect for the Ring Road, Golden Circle, and beyond.",
+    highlight: "From Day 1",
+  },
+  {
+    icon: "🏕️",
+    title: "Camper Rental",
+    description:
+      "Hit the road and sleep under the midnight sun in our Renault Master Camper — fully equipped for self-sufficient adventures.",
+    highlight: "Sleep-In Ready",
+  },
+  {
+    icon: "✈️",
+    title: "Airport Pickup",
+    description:
+      "Arrive at KEF and drive straight into your adventure. We're just 5 minutes from the airport — no shuttles, no waiting.",
+    highlight: "5 min from KEF",
+  },
+  {
+    icon: "📅",
+    title: "Long-Term Rentals",
+    description:
+      "Staying for a month or more? Ask about our long-term rates. Special prices for extended adventures or work contracts.",
+    highlight: "Best Rates",
+  },
+];
+
+export default function Services() {
+  return (
+    <section id="services" className="py-16 md:py-24 bg-brand-primary">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-14">
+          <p className="uppercase tracking-[0.2em] text-brand-accent text-sm font-semibold mb-3">
+            What We Offer
+          </p>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-white">
+            Our Services
+          </h2>
+          <p className="text-white/60 mt-4 max-w-xl mx-auto">
+            From a one-day adventure to a month-long road trip — we have the right vehicle and service for you.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((s) => (
+            <div
+              key={s.title}
+              className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-brand-accent hover:bg-white/10 transition-all group"
+            >
+              <div className="text-4xl mb-4">{s.icon}</div>
+              <span className="inline-block text-xs font-semibold text-brand-accent uppercase tracking-wider mb-3">
+                {s.highlight}
+              </span>
+              <h3 className="font-heading text-white font-bold text-lg mb-3">
+                {s.title}
+              </h3>
+              <p className="text-white/60 text-sm leading-relaxed">{s.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <a
+            href="#fleet"
+            className="inline-block bg-brand-accent text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-orange-600 transition-colors"
+          >
+            Browse Our Fleet
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
