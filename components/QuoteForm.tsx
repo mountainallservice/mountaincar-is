@@ -69,7 +69,7 @@ export default function QuoteForm() {
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 grid gap-5"
+            className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 md:p-8 grid gap-5"
           >
             <div className="grid md:grid-cols-2 gap-5">
               <div>
