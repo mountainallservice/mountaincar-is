@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || open
           ? "bg-brand-primary shadow-lg py-3"
           : "bg-transparent py-4"
       }`}
@@ -81,7 +81,9 @@ export default function Navbar() {
         <button
           className="md:hidden text-white p-2"
           onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           <div className={`w-6 h-0.5 bg-white transition-all mb-1.5 ${open ? "rotate-45 translate-y-2" : ""}`} />
           <div className={`w-6 h-0.5 bg-white transition-all mb-1.5 ${open ? "opacity-0" : ""}`} />
@@ -91,7 +93,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-brand-primary px-4 pb-6 pt-2 flex flex-col gap-4">
+        <div id="mobile-menu" className="md:hidden bg-brand-primary px-4 pb-6 pt-2 flex flex-col gap-4">
           {links.map((l) => (
             <a
               key={l.href}
