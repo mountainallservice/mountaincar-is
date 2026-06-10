@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <header
-      className="relative min-h-screen md:h-screen flex items-center justify-center"
+      className="relative min-h-[100svh] md:h-screen flex items-center justify-center"
       style={{
         backgroundImage:
           'linear-gradient(rgba(30,41,59,0.6), rgba(30,41,59,0.5)), url("https://d1yei2z3i6k35z.cloudfront.net/16287944/698b710f2a12a_IMG-20250608-WA0036.jpg")',
