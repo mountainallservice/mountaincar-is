@@ -50,7 +50,7 @@ export default function About() {
               alt="Iceland Adventure"
               width={600}
               height={500}
-              className="rounded-2xl object-cover w-full h-[420px]"
+              className="rounded-2xl object-cover w-full h-[260px] md:h-[420px]"
               unoptimized
             />
             <div className="absolute bottom-4 left-4 bg-white rounded-xl px-5 py-3 shadow-lg">
