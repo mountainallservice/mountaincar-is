@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const vehicles = [
   "Dacia Duster 4x4",
@@ -11,9 +11,19 @@ const vehicles = [
 
 type Status = "idle" | "sending" | "success" | "error";
 
+const fieldBase =
+  "w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2 focus-visible:ring-offset-brand-primary focus-visible:border-brand-accent";
+const dateBase =
+  "min-w-0 appearance-none [color-scheme:dark] w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2 focus-visible:ring-offset-brand-primary focus-visible:border-brand-accent";
+
 export default function QuoteForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const successRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (status === "success") successRef.current?.focus();
+  }, [status]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -47,7 +57,7 @@ export default function QuoteForm() {
   }
 
   return (
-    <section id="quote" className="py-16 md:py-24 bg-brand-primary relative">
+    <section id="quote" className="py-16 md:py-24 bg-brand-primary relative scroll-mt-20">
       <div className="max-w-3xl mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-3">
@@ -59,8 +69,14 @@ export default function QuoteForm() {
         </div>
 
         {status === "success" ? (
-          <div className="bg-green-500/20 border border-green-400 text-white rounded-xl p-8 text-center">
-            <div className="text-5xl mb-4">✅</div>
+          <div
+            ref={successRef}
+            tabIndex={-1}
+            role="status"
+            aria-live="polite"
+            className="bg-green-500/20 border border-green-400 text-white rounded-xl p-8 text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400"
+          >
+            <div className="text-5xl mb-4" aria-hidden="true">✅</div>
             <h3 className="font-heading font-bold text-xl mb-2">Quote Request Sent!</h3>
             <p className="text-white/80">
               We&apos;ll get back to you as soon as possible with a personalized offer.
@@ -72,66 +88,35 @@ export default function QuoteForm() {
             className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 md:p-8 grid gap-5"
           >
             <div className="grid md:grid-cols-2 gap-5">
-              <div>
-                <label className="text-white/80 text-sm font-medium block mb-1.5">Full Name *</label>
-                <input
-                  name="name"
-                  type="text"
-                  required
-                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-accent"
-                  placeholder="John Smith"
-                />
+              <div className="min-w-0">
+                <label htmlFor="qf-name" className="text-white/80 text-sm font-medium block mb-1.5">Full Name *</label>
+                <input id="qf-name" name="name" type="text" required className={fieldBase} placeholder="John Smith" />
               </div>
-              <div>
-                <label className="text-white/80 text-sm font-medium block mb-1.5">Phone Number *</label>
-                <input
-                  name="phone"
-                  type="tel"
-                  required
-                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-accent"
-                  placeholder="+48 123 456 789"
-                />
+              <div className="min-w-0">
+                <label htmlFor="qf-phone" className="text-white/80 text-sm font-medium block mb-1.5">Phone Number *</label>
+                <input id="qf-phone" name="phone" type="tel" required className={fieldBase} placeholder="+48 123 456 789" />
               </div>
             </div>
 
             <div>
-              <label className="text-white/80 text-sm font-medium block mb-1.5">Email Address *</label>
-              <input
-                name="email"
-                type="email"
-                required
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-accent"
-                placeholder="your@email.com"
-              />
+              <label htmlFor="qf-email" className="text-white/80 text-sm font-medium block mb-1.5">Email Address *</label>
+              <input id="qf-email" name="email" type="email" required className={fieldBase} placeholder="your@email.com" />
             </div>
 
             <div className="grid md:grid-cols-2 gap-5">
-              <div>
-                <label className="text-white/80 text-sm font-medium block mb-1.5">Pick-up Date *</label>
-                <input
-                  name="pickup_date"
-                  type="date"
-                  required
-                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-accent"
-                />
+              <div className="min-w-0">
+                <label htmlFor="qf-pickup" className="text-white/80 text-sm font-medium block mb-1.5">Pick-up Date *</label>
+                <input id="qf-pickup" name="pickup_date" type="date" required className={dateBase} />
               </div>
-              <div>
-                <label className="text-white/80 text-sm font-medium block mb-1.5">Return Date *</label>
-                <input
-                  name="return_date"
-                  type="date"
-                  required
-                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-accent"
-                />
+              <div className="min-w-0">
+                <label htmlFor="qf-return" className="text-white/80 text-sm font-medium block mb-1.5">Return Date *</label>
+                <input id="qf-return" name="return_date" type="date" required className={dateBase} />
               </div>
             </div>
 
             <div>
-              <label className="text-white/80 text-sm font-medium block mb-1.5">Preferred Vehicle</label>
-              <select
-                name="vehicle"
-                className="w-full bg-brand-primary border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-accent"
-              >
+              <label htmlFor="qf-vehicle" className="text-white/80 text-sm font-medium block mb-1.5">Preferred Vehicle</label>
+              <select id="qf-vehicle" name="vehicle" className={`${fieldBase} bg-brand-primary`}>
                 {vehicles.map((v) => (
                   <option key={v} value={v}>
                     {v}
@@ -141,16 +126,11 @@ export default function QuoteForm() {
             </div>
 
             <div>
-              <label className="text-white/80 text-sm font-medium block mb-1.5">Message (Optional)</label>
-              <textarea
-                name="message"
-                rows={4}
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-accent resize-none"
-                placeholder="Any specific requirements or questions..."
-              />
+              <label htmlFor="qf-message" className="text-white/80 text-sm font-medium block mb-1.5">Message (Optional)</label>
+              <textarea id="qf-message" name="message" rows={4} className={`${fieldBase} resize-none`} placeholder="Any specific requirements or questions..." />
             </div>
 
-            {error && <p className="text-red-400 text-sm">{error}</p>}
+            {error && <p role="alert" className="text-red-400 text-sm">{error}</p>}
 
             <button
               type="submit"
