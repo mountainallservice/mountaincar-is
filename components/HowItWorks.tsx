@@ -18,7 +18,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="services" className="py-16 md:py-20 bg-slate-50 border-t border-slate-200">
+    <section id="how-it-works" className="py-16 md:py-20 bg-slate-50 border-t border-slate-200 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <p className="uppercase tracking-[0.2em] text-brand-accent text-sm font-semibold mb-3">
