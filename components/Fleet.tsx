@@ -36,6 +36,19 @@ const cars = [
       { label: "A/C", value: "Manual" },
     ],
   },
+  {
+    name: "VW Caddy Beach",
+    desc: "Compact camper for 4–5 people. Rooftop tent, camping kit, free WiFi — perfect for couples or small groups.",
+    img: "/fleet/caddy-beach.jpg",
+    specs: [
+      { label: "Seats", value: "5" },
+      { label: "Engine", value: "2.0 TDI" },
+      { label: "Gearbox", value: "Manual" },
+      { label: "Drive", value: "FWD" },
+      { label: "Tent", value: "Rooftop" },
+      { label: "WiFi", value: "Free" },
+    ],
+  },
 ];
 
 export default function Fleet() {
