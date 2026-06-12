@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useT } from "@/lib/i18n";
 
 const vehicles = [
   "Dacia Duster 4x4",
@@ -17,6 +18,7 @@ const dateBase =
   "min-w-0 appearance-none [color-scheme:dark] w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2 focus-visible:ring-offset-brand-primary focus-visible:border-brand-accent";
 
 export default function QuoteForm() {
+  const { t } = useT();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const successRef = useRef<HTMLDivElement>(null);
@@ -52,7 +54,7 @@ export default function QuoteForm() {
       form.reset();
     } catch {
       setStatus("error");
-      setError("Something went wrong. Please email us directly at rental@mountaincar.is");
+      setError(t("quote.error"));
     }
   }
 
@@ -61,11 +63,9 @@ export default function QuoteForm() {
       <div className="max-w-3xl mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-3">
-            Request a Quote
+            {t("quote.title")}
           </h2>
-          <p className="text-white/70">
-            Tell us your dates and preferred vehicle, and we&apos;ll send you a personalized offer.
-          </p>
+          <p className="text-white/70">{t("quote.sub")}</p>
         </div>
 
         {status === "success" ? (
@@ -77,10 +77,8 @@ export default function QuoteForm() {
             className="bg-green-500/20 border border-green-400 text-white rounded-xl p-8 text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400"
           >
             <div className="text-5xl mb-4" aria-hidden="true">✅</div>
-            <h3 className="font-heading font-bold text-xl mb-2">Quote Request Sent!</h3>
-            <p className="text-white/80">
-              We&apos;ll get back to you as soon as possible with a personalized offer.
-            </p>
+            <h3 className="font-heading font-bold text-xl mb-2">{t("quote.successTitle")}</h3>
+            <p className="text-white/80">{t("quote.successText")}</p>
           </div>
         ) : (
           <form
@@ -89,45 +87,45 @@ export default function QuoteForm() {
           >
             <div className="grid md:grid-cols-2 gap-5">
               <div className="min-w-0">
-                <label htmlFor="qf-name" className="text-white/80 text-sm font-medium block mb-1.5">Full Name *</label>
-                <input id="qf-name" name="name" type="text" required className={fieldBase} placeholder="John Smith" />
+                <label htmlFor="qf-name" className="text-white/80 text-sm font-medium block mb-1.5">{t("quote.name")}</label>
+                <input id="qf-name" name="name" type="text" required className={fieldBase} placeholder={t("quote.namePh")} />
               </div>
               <div className="min-w-0">
-                <label htmlFor="qf-phone" className="text-white/80 text-sm font-medium block mb-1.5">Phone Number *</label>
-                <input id="qf-phone" name="phone" type="tel" required className={fieldBase} placeholder="+48 123 456 789" />
+                <label htmlFor="qf-phone" className="text-white/80 text-sm font-medium block mb-1.5">{t("quote.phone")}</label>
+                <input id="qf-phone" name="phone" type="tel" required className={fieldBase} placeholder="+354 888 8005" />
               </div>
             </div>
 
             <div>
-              <label htmlFor="qf-email" className="text-white/80 text-sm font-medium block mb-1.5">Email Address *</label>
+              <label htmlFor="qf-email" className="text-white/80 text-sm font-medium block mb-1.5">{t("quote.email")}</label>
               <input id="qf-email" name="email" type="email" required className={fieldBase} placeholder="your@email.com" />
             </div>
 
             <div className="grid md:grid-cols-2 gap-5">
               <div className="min-w-0">
-                <label htmlFor="qf-pickup" className="text-white/80 text-sm font-medium block mb-1.5">Pick-up Date *</label>
+                <label htmlFor="qf-pickup" className="text-white/80 text-sm font-medium block mb-1.5">{t("quote.pickup")}</label>
                 <input id="qf-pickup" name="pickup_date" type="date" required className={dateBase} />
               </div>
               <div className="min-w-0">
-                <label htmlFor="qf-return" className="text-white/80 text-sm font-medium block mb-1.5">Return Date *</label>
+                <label htmlFor="qf-return" className="text-white/80 text-sm font-medium block mb-1.5">{t("quote.return")}</label>
                 <input id="qf-return" name="return_date" type="date" required className={dateBase} />
               </div>
             </div>
 
             <div>
-              <label htmlFor="qf-vehicle" className="text-white/80 text-sm font-medium block mb-1.5">Preferred Vehicle</label>
+              <label htmlFor="qf-vehicle" className="text-white/80 text-sm font-medium block mb-1.5">{t("quote.vehicle")}</label>
               <select id="qf-vehicle" name="vehicle" className={`${fieldBase} bg-brand-primary`}>
                 {vehicles.map((v) => (
                   <option key={v} value={v}>
-                    {v}
+                    {v === "Other / Unsure" ? t("quote.vehicleOther") : v}
                   </option>
                 ))}
               </select>
             </div>
 
             <div>
-              <label htmlFor="qf-message" className="text-white/80 text-sm font-medium block mb-1.5">Message (Optional)</label>
-              <textarea id="qf-message" name="message" rows={4} className={`${fieldBase} resize-none`} placeholder="Any specific requirements or questions..." />
+              <label htmlFor="qf-message" className="text-white/80 text-sm font-medium block mb-1.5">{t("quote.message")}</label>
+              <textarea id="qf-message" name="message" rows={4} className={`${fieldBase} resize-none`} placeholder={t("quote.messagePh")} />
             </div>
 
             {error && <p role="alert" className="text-red-400 text-sm">{error}</p>}
@@ -137,9 +135,9 @@ export default function QuoteForm() {
               disabled={status === "sending"}
               className="bg-brand-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-600 transition-colors disabled:opacity-60 w-full"
             >
-              {status === "sending" ? "Sending..." : "Send Request"}
+              {status === "sending" ? t("quote.sending") : t("quote.send")}
             </button>
-            <p className="text-white/40 text-xs text-center">🔒 SSL Secure</p>
+            <p className="text-white/40 text-xs text-center">🔒 {t("quote.ssl")}</p>
           </form>
         )}
       </div>

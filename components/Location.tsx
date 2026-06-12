@@ -1,25 +1,28 @@
+"use client";
+
+import { useT } from "@/lib/i18n";
+
 export default function Location() {
+  const { t } = useT();
   return (
-    <section className="bg-white">
+    <section id="visit" className="bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 py-10">
         <div className="grid md:grid-cols-2 gap-8 items-center mb-6">
           <div>
             <h2 className="font-heading text-2xl font-bold text-brand-primary mb-2">
-              Visit Our Office
+              {t("loc.title")}
             </h2>
             <p className="text-slate-600 flex items-center gap-2 mb-1">
               <span>📍</span> Njarðarbraut 3i, 260 Reykjanesbær
             </p>
-            <p className="text-slate-500 text-sm mb-4">
-              Just 5 minutes from KEF Airport. Easy access to the main highway.
-            </p>
+            <p className="text-slate-500 text-sm mb-4">{t("loc.sub")}</p>
             <a
               href="https://maps.google.com/?q=Njarðarbraut+3i,+260+Reykjanesbær"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand-accent text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-orange-600 transition-colors"
             >
-              Get Directions →
+              {t("loc.directions")} →
             </a>
           </div>
         </div>

@@ -1,4 +1,9 @@
+"use client";
+
+import { useT } from "@/lib/i18n";
+
 export default function CtaBanner() {
+  const { t } = useT();
   return (
     <section className="py-16 bg-brand-accent relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
@@ -9,11 +14,8 @@ export default function CtaBanner() {
         <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4">
           Þetta Reddast!
         </h2>
-        <p className="text-white/90 text-lg mb-2">
-          &ldquo;It will all work out.&rdquo; It&apos;s not just a motto, it&apos;s the Icelandic way of life.
-          Don&apos;t worry, enjoy the drive.
-        </p>
-        <p className="text-white/70 font-semibold">- With Love, Mountain Car</p>
+        <p className="text-white/90 text-lg mb-2">{t("cta.subQuote")}</p>
+        <p className="text-white/70 font-semibold">{t("cta.sign")}</p>
       </div>
     </section>
   );

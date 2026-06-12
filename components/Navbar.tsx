@@ -2,15 +2,17 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useT, LangSwitcher } from "@/lib/i18n";
 
 const links = [
-  { label: "About Us", href: "#about" },
-  { label: "Our Fleet", href: "#fleet" },
-  { label: "Services", href: "#services" },
-  { label: "Reviews", href: "#reviews" },
+  { key: "nav.about", href: "#about" },
+  { key: "nav.fleet", href: "#fleet" },
+  { key: "nav.services", href: "#services" },
+  { key: "nav.reviews", href: "#reviews" },
 ];
 
 export default function Navbar() {
+  const { t } = useT();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -41,7 +43,8 @@ export default function Navbar() {
             <a href="tel:+3548888005" className="hover:text-white transition-colors">
               +354 888 8005
             </a>
-            <span>Mon - Sat: 10:00 - 18:00</span>
+            <span>{t("nav.hours")}</span>
+            <LangSwitcher />
           </div>
         </div>
       )}
@@ -66,14 +69,15 @@ export default function Navbar() {
               href={l.href}
               className="text-white font-medium text-sm hover:text-brand-accent transition-colors"
             >
-              {l.label}
+              {t(l.key)}
             </a>
           ))}
+          {scrolled && <LangSwitcher />}
           <a
             href="#quote"
             className="bg-brand-accent text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-orange-600 transition-colors"
           >
-            Contact Us
+            {t("nav.contact")}
           </a>
         </div>
 
@@ -101,7 +105,7 @@ export default function Navbar() {
               className="text-white font-medium hover:text-brand-accent"
               onClick={() => setOpen(false)}
             >
-              {l.label}
+              {t(l.key)}
             </a>
           ))}
           <a
@@ -109,13 +113,16 @@ export default function Navbar() {
             className="bg-brand-accent text-white px-5 py-2.5 rounded-lg text-sm font-semibold text-center hover:bg-orange-600 transition-colors"
             onClick={() => setOpen(false)}
           >
-            Request Quote
+            {t("nav.requestQuote")}
           </a>
+          <div className="flex justify-center pt-1">
+            <LangSwitcher />
+          </div>
           <a
             href="https://mountaincar.is"
             className="text-white/60 text-xs text-center hover:text-white transition-colors"
           >
-            ← Back to mountaincar.is
+            ← {t("nav.back")}
           </a>
         </div>
       )}

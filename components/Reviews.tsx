@@ -1,37 +1,22 @@
+"use client";
+
+import { useT } from "@/lib/i18n";
+
 const reviews = [
-  {
-    initials: "JT",
-    name: "Jake Trout",
-    location: "Florida, USA",
-    text: "Renting from Mountain Car was a breeze. They equipped me with the perfect 4×4 for the gravel roads.",
-  },
-  {
-    initials: "CG",
-    name: "Claudia Gahter",
-    location: "Berlin, Germany",
-    text: "Mountain Car made it easy. Their transparency about costs meant no unpleasant surprises.",
-  },
-  {
-    initials: "RS",
-    name: "Raj Suhdumi",
-    location: "New Delhi, India",
-    text: "The vehicle was superb and came with all the amenities. The free minor damage policy was a relief.",
-  },
-  {
-    initials: "HA",
-    name: "Hirobitu Akira",
-    location: "Mie, Japan",
-    text: "No hidden fees, and their loyalty program is a perk. The staff's friendliness was impressive. We'll be back!",
-  },
+  { initials: "JT", name: "Jake Trout", location: "Florida, USA", k: "review.1" },
+  { initials: "CG", name: "Claudia Gahter", location: "Berlin, Germany", k: "review.2" },
+  { initials: "RS", name: "Raj Suhdumi", location: "New Delhi, India", k: "review.3" },
+  { initials: "HA", name: "Hirobitu Akira", location: "Mie, Japan", k: "review.4" },
 ];
 
 export default function Reviews() {
+  const { t } = useT();
   return (
     <section id="reviews" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-primary">
-            What Clients Say
+            {t("reviews.title")}
           </h2>
         </div>
 
@@ -51,7 +36,7 @@ export default function Reviews() {
                 </div>
               </div>
               <div className="text-brand-accent text-lg mb-2">★★★★★</div>
-              <p className="text-slate-600 text-sm leading-relaxed italic">&ldquo;{r.text}&rdquo;</p>
+              <p className="text-slate-600 text-sm leading-relaxed italic">&ldquo;{t(r.k)}&rdquo;</p>
             </div>
           ))}
         </div>

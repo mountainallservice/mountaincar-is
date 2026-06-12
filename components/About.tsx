@@ -1,32 +1,24 @@
+"use client";
+
 import Image from "next/image";
+import { useT } from "@/lib/i18n";
 
 export default function About() {
+  const { t } = useT();
   return (
     <section id="about" className="py-16 md:py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="uppercase tracking-[0.2em] text-brand-accent text-sm font-semibold mb-3">
-              Our Philosophy
+              {t("about.kicker")}
             </p>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-primary mb-6">
-              Built on Trust, Not Policies
+              {t("about.title")}
             </h2>
-            <p className="text-slate-600 mb-4 leading-relaxed">
-              We don&apos;t believe in the stiff, corporate way of doing things. At Mountain Car, we
-              don&apos;t see you as a contract number or a risk factor—we see you as a{" "}
-              <strong>friend</strong> visiting our home.
-            </p>
-            <p className="text-slate-600 mb-4 leading-relaxed">
-              Our business is built entirely on <strong>trust</strong>. We hand you the keys with
-              full confidence, believing that you will care for our cars as if they were your own.
-              In return, we offer you a rental experience that is personal, flexible, and free from
-              hidden traps.
-            </p>
-            <p className="text-slate-600 leading-relaxed">
-              We treat our customers the way we would like to be treated: with honesty, warmth, and
-              a lot of heart.
-            </p>
+            <p className="text-slate-600 mb-4 leading-relaxed">{t("about.p1")}</p>
+            <p className="text-slate-600 mb-4 leading-relaxed">{t("about.p2")}</p>
+            <p className="text-slate-600 leading-relaxed">{t("about.p3")}</p>
 
             <div className="flex items-center gap-4 mt-8">
               <Image
@@ -39,7 +31,7 @@ export default function About() {
               />
               <div>
                 <p className="font-heading font-bold text-brand-primary">Gosia</p>
-                <p className="text-sm text-slate-500 uppercase tracking-wide">Owner &amp; Founder</p>
+                <p className="text-sm text-slate-500 uppercase tracking-wide">{t("about.role")}</p>
               </div>
             </div>
           </div>
@@ -54,8 +46,8 @@ export default function About() {
               unoptimized
             />
             <div className="absolute bottom-4 left-4 bg-white rounded-xl px-5 py-3 shadow-lg">
-              <p className="text-xs text-slate-500 uppercase tracking-widest">Born in the Highlands</p>
-              <p className="font-heading font-bold text-brand-primary">Est. 2017</p>
+              <p className="text-xs text-slate-500 uppercase tracking-widest">{t("about.badge1")}</p>
+              <p className="font-heading font-bold text-brand-primary">{t("about.badge2")}</p>
             </div>
           </div>
         </div>
