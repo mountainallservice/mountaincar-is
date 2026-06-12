@@ -66,9 +66,9 @@ export default function Fleet() {
           {cars.map((car) => (
             <div
               key={car.name}
-              className="bg-white/10 border border-white/20 rounded-2xl overflow-hidden hover:bg-white/15 transition-colors"
+              className="flex flex-col h-full bg-white/10 border border-white/20 rounded-2xl overflow-hidden hover:bg-white/15 transition-colors"
             >
-              <div className="relative h-52">
+              <div className="relative h-52 shrink-0">
                 <Image
                   src={car.img}
                   alt={car.name}
@@ -77,7 +77,7 @@ export default function Fleet() {
                   unoptimized
                 />
               </div>
-              <div className="p-6">
+              <div className="flex flex-col flex-1 p-6">
                 <h3 className="font-heading font-bold text-xl mb-2">{car.name}</h3>
                 <p className="text-white/70 text-sm mb-5">{car.desc}</p>
 
@@ -92,7 +92,7 @@ export default function Fleet() {
 
                 <a
                   href="#quote"
-                  className="block text-center bg-brand-accent text-white px-5 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors w-full"
+                  className="mt-auto block text-center bg-brand-accent text-white px-5 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors w-full"
                 >
                   Request Quote
                 </a>
