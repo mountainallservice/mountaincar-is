@@ -83,7 +83,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-10 pt-6 text-center text-white/40 text-xs">
           © 2025 – Mountain All Service ehf. {t("footer.rights")}
-          <span className="mx-2">·</span>
+          {/* [ukryte 2026-07-21] <span className="mx-2">·</span>
           built by{" "}
           <a
             href="https://kamiljan.com"
@@ -92,7 +92,7 @@ export default function Footer() {
             className="hover:text-white transition-colors"
           >
             Kamil Jan
-          </a>
+          </a> */}
         </div>
       </div>
     </footer>
