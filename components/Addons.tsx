@@ -7,7 +7,7 @@ const addons = [
   { icon: "📶", k: "addon.wifi" },
   { icon: "⛺", k: "addon.tent" },
   { icon: "🧊", k: "addon.cooler" },
-  { icon: "🛏️", k: "addon.blanket" },
+  { icon: "🌡️", k: "addon.heating" },
   { icon: "🪑", k: "addon.childseat" },
   { icon: "🔧", k: "addon.roofrack" },
   { icon: "🔥", k: "addon.gas" },
