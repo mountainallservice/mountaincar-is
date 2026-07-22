@@ -51,7 +51,7 @@ export const cars: Car[] = [
     ],
   },
   {
-    name: "Renault Trafic 2017",
+    name: "Renault Trafic",
     dk: "fleet.d5",
     img: "/fleet/renault-trafic.jpg",
     specs: [
