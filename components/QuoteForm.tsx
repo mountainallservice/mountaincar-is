@@ -2,15 +2,10 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useT } from "@/lib/i18n";
+import { vehicleNames } from "@/lib/fleet-data";
 
-const vehicles = [
-  "Dacia Duster 4x4",
-  "Duster + Roof Tent",
-  "Renault Master Camper",
-  "VW Caddy Beach",
-  "Renault Trafic 2017",
-  "Other / Unsure",
-];
+// Single source of truth: fleet vehicles + a catch-all option.
+const vehicles = [...vehicleNames, "Other / Unsure"];
 
 type Status = "idle" | "sending" | "success" | "error";
 
