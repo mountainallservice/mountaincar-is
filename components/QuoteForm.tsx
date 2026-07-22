@@ -7,6 +7,8 @@ const vehicles = [
   "Dacia Duster 4x4",
   "Duster + Roof Tent",
   "Renault Master Camper",
+  "VW Caddy Beach",
+  "Renault Trafic 2017",
   "Other / Unsure",
 ];
 
@@ -116,7 +118,7 @@ export default function QuoteForm() {
               <label htmlFor="qf-vehicle" className="text-white/80 text-sm font-medium block mb-1.5">{t("quote.vehicle")}</label>
               <select id="qf-vehicle" name="vehicle" className={`${fieldBase} bg-brand-primary`}>
                 {vehicles.map((v) => (
-                  <option key={v} value={v}>
+                  <option key={v} value={v} className="text-slate-900 bg-white">
                     {v === "Other / Unsure" ? t("quote.vehicleOther") : v}
                   </option>
                 ))}
