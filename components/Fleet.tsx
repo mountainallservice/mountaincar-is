@@ -52,6 +52,18 @@ const cars = [
       { lk: "spec.WiFi", value: "Free" },
     ],
   },
+  {
+    name: "Renault Trafic 2017",
+    dk: "fleet.d5",
+    img: "/fleet/renault-trafic.jpg",
+    specs: [
+      { lk: "spec.Seats", value: "9" },
+      { lk: "spec.Doors", value: "5" },
+      { lk: "spec.Fuel", value: "7.0 l/100km" },
+      { lk: "spec.Gearbox", value: "Manual" },
+      { lk: "spec.AC", value: "Manual" },
+    ],
+  },
 ];
 
 const TRANSLATABLE = ["Manual", "Rooftop", "Free"];
